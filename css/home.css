@@ -1,0 +1,36 @@
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  border-radius: 30px;
+}
+
+.add {
+  position: absolute;
+  left: 2vw;
+  top: 10vw;
+  background-color: var(--dark-grey);
+  border-radius: 30px;
+  border: 2px solid var(--yellow);
+  height: fit-content;
+  max-width: 400px;
+  min-width: fit-content;
+  padding: 2em;
+}
+
+.add h1,
+h3 {
+  margin: 0;
+}
+
+.current {
+  fill: var(--purple);
+}

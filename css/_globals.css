@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
+@import url("./home.css");
 
 *,
 *::before,
@@ -69,18 +70,58 @@ a {
     align-items: center;
   }
 
-  nav a {
+  .link {
+    display: flex;
+    position: relative;
     margin-right: 2em;
     font-weight: 400;
     font-size: 14px;
     padding: 0 0.6em;
     height: 25px;
+    align-items: center;
   }
 
-  nav a:hover {
+  nav .link:hover {
     background: linear-gradient(135deg, #e64cf3 7.81%, #fcff5e 78.65%);
     border-radius: 30px;
     color: var(--dark-grey);
+  }
+  nav .link:hover a {
+    color: var(--dark-grey);
+  }
+
+  nav {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .drop {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    overflow: auto;
+    top: 25px;
+    left: -0.08em;
+    background-color: var(--light-purple);
+    z-index: 10;
+    list-style-type: none;
+    border-radius: 9px;
+    box-shadow: 2px 2px var(--yellow);
+  }
+
+  .drop a {
+    display: block;
+    color: var(--dark-grey);
+    padding: 0.8em;
+    border-radius: inherit;
+  }
+
+  .drop a:hover {
+    background-color: var(--purple);
+  }
+
+  .link:hover .drop {
+    display: block;
   }
 
   button {
@@ -124,43 +165,6 @@ a {
     align-self: center;
   }
 
-  .banner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3vw;
-  }
-
-  .banner {
-    position: relative;
-  }
-
-  .banner img {
-    border-radius: 30px;
-  }
-
-  .add {
-    position: absolute;
-    left: 2vw;
-    top: 10vw;
-    background-color: var(--dark-grey);
-    border-radius: 30px;
-    border: 2px solid var(--yellow);
-    height: fit-content;
-    max-width: 400px;
-    min-width: fit-content;
-    padding: 2em;
-  }
-
-  .add h1,
-  h3 {
-    margin: 0;
-  }
-
-  .current {
-    fill: var(--purple);
-  }
-
   .first {
     position: relative;
     text-shadow: 4px 3px var(--purple);
@@ -190,6 +194,21 @@ a {
     z-index: -8;
   }
 
+  .second {
+    position: relative;
+  }
+
+  .second::after {
+    content: "";
+    position: absolute;
+    background-color: var(--light-yellow);
+    height: 0.6em;
+    width: 40%;
+    left: -3vw;
+    top: 30%;
+    z-index: -8;
+  }
+
   .products-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -203,6 +222,7 @@ a {
     padding: 0 1em;
     transition: transform 0.2s ease-in-out;
     border: solid 1px rgba(0, 0, 0, 0);
+    max-width: 300px;
   }
 
   .product .additional {
@@ -268,5 +288,8 @@ a {
     display: flex;
     width: 10vw;
     justify-content: space-around;
+  }
+  .socials img {
+    opacity: 0.6;
   }
 }
