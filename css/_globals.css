@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
+@import url("./home.css");
 
 *,
 *::before,
@@ -164,43 +165,6 @@ a {
     align-self: center;
   }
 
-  .banner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3vw;
-  }
-
-  .banner {
-    position: relative;
-  }
-
-  .banner img {
-    border-radius: 30px;
-  }
-
-  .add {
-    position: absolute;
-    left: 2vw;
-    top: 10vw;
-    background-color: var(--dark-grey);
-    border-radius: 30px;
-    border: 2px solid var(--yellow);
-    height: fit-content;
-    max-width: 400px;
-    min-width: fit-content;
-    padding: 2em;
-  }
-
-  .add h1,
-  h3 {
-    margin: 0;
-  }
-
-  .current {
-    fill: var(--purple);
-  }
-
   .first {
     position: relative;
     text-shadow: 4px 3px var(--purple);
@@ -230,6 +194,21 @@ a {
     z-index: -8;
   }
 
+  .second {
+    position: relative;
+  }
+
+  .second::after {
+    content: "";
+    position: absolute;
+    background-color: var(--light-yellow);
+    height: 0.6em;
+    width: 40%;
+    left: -3vw;
+    top: 30%;
+    z-index: -8;
+  }
+
   .products-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -243,6 +222,7 @@ a {
     padding: 0 1em;
     transition: transform 0.2s ease-in-out;
     border: solid 1px rgba(0, 0, 0, 0);
+    max-width: 300px;
   }
 
   .product .additional {
