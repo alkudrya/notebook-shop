@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
-@import url("./home.css");
 
 *,
 *::before,
@@ -42,11 +41,11 @@ p {
   font-size: 13px;
 }
 
-.y {
+.yellow {
   color: var(--yellow);
 }
 
-.p {
+.purple {
   color: var(--purple);
 }
 
@@ -56,9 +55,14 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
-a {
+header a {
   text-decoration: none;
   color: var(--light-purple);
+}
+
+.product a {
+  text-decoration: none;
+  color: var(--dark-grey);
 }
 
 @media (min-width: 800px) {
@@ -134,6 +138,7 @@ a {
     background-color: var(--purple);
     border: none;
     margin-left: 2em;
+    cursor: pointer;
   }
 
   button:hover {
@@ -150,6 +155,7 @@ a {
     font-weight: 400;
     color: var(--light-purple);
     background-color: rgba(255, 255, 255, 0.4);
+    margin-left: 1em;
     padding-left: 1em;
   }
 
@@ -280,7 +286,7 @@ a {
     align-items: center;
   }
 
-  .email p {
+  .email purple {
     padding-right: 2em;
   }
 
